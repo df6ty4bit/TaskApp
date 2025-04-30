@@ -1,21 +1,21 @@
 import { useState } from "react";
 
 const TodoList = () => {
-    const [Tasks, setTasks] = useState([
-        "kill my crush",
-        "eat breakfast",
-        "workout"
-    ]);
+    const [Tasks, setTasks] = useState([]);
     const [NewTask, setNewTask] = useState("");
     const HandleInputChange = event => {
         setNewTask(event.target.value);
     };
     const addTask = () => {
-      if(NewTask.trim()!== ""){setTasks(t => [...Tasks, NewTask]);
-        setNewTask("");}
-        
+        if (NewTask.trim() !== "") {
+            setTasks(t => [...Tasks, NewTask]);
+            setNewTask("");
+        }
     };
-    const deleteTask = index => {};
+    const deleteTask = index => {
+        const updatedTask = Tasks.filter((_, i) => i !== index);
+        setTasks(updatedTask);
+    };
     const moveTaskUp = index => {};
     const moveTaskDown = index => {};
 
