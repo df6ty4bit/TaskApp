@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./TodoList.css";
 
 const TodoList = () => {
     const [Tasks, setTasks] = useState([]);
@@ -29,7 +30,7 @@ const TodoList = () => {
                     value={NewTask}
                     onChange={HandleInputChange}
                 />
-                <button className="add-button" onClick={addTask}>
+                <button className="add-btn" onClick={addTask}>
                     Add
                 </button>
             </div>
@@ -38,22 +39,10 @@ const TodoList = () => {
                     <li key={index}>
                         <span>{task}</span>
                         <button
-                            className="delete-button"
+                            className="delete-btn"
                             onClick={() => deleteTask(index)}
                         >
                             Delete
-                        </button>
-                        <button
-                            className="moveup-button"
-                            onClick={() => moveTaskUp(index)}
-                        >
-                            MoveUp
-                        </button>
-                        <button
-                            className="movedown-button"
-                            onClick={() => moveTaskDown(index)}
-                        >
-                            moveDown
                         </button>
                     </li>
                 ))}

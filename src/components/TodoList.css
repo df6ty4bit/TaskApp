@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #060a22;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: white;
+}
+.to-do-list {
+    align-content: center;
+    margin-left: 5px;
+    padding: 0;
+}
+.to-do-list h1 {
+    align-items: center;
+    justify-content: center;
+    flex: 0px;
+    margin-left: 35px;
+}
+input {
+    color: whitesmoke;
+    width: 200px;
+    height: 26px;
+    margin-left: 15px;
+    border-radius: 7px;
+    background-color: #0f111a;
+}
+.delete-btn {
+    border: none;
+    color: mediumvioletred;
+    background-color: lightgray;
+    width: 80px;
+    height: 26px;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 7px;
+}
+.add-btn {
+    border: none;
+    background-color: lightgray;
+    width: 80px;
+    height: 29px;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 7px;
+    color: whitesmoke;
+}
+li {
+    list-style-type: circle;
+    font-family: cursive;
+}
